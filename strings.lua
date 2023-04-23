@@ -23,7 +23,7 @@ return {
 			"2. Andernfalls, und wenn sie nahe einer Industrie platziert wird, erhält sie deren Namen.\n"..
 			"3. Bei Straßenhalten kann der Stadtname automatisch entfernt werden.\n\n"..
 			"Die Funktionalität ist konfigurierbar. Suchradien können nach Deinen Vorlieben angepasst werden, oder Du kannst z.B. die Suche nach vorhandenen Stationen abschalten und nur die Auto-Benennung nach Industrien verwenden.\n\n"..
-			"Die Einzugsgebiete der Indutrien scheinen Distanzen von etwa 400 abzudecken. Bei der Suche nach vorhandenen Stationen werden nur Gebäude berücksichtigt, nicht aber Straßenhalte.",
+			"Die Einzugsgebiete der Industrien scheinen Distanzen von etwa 400 abzudecken. Bei der Suche nach vorhandenen Stationen werden nur Gebäude berücksichtigt, nicht aber Straßenhalte.",
 		["findIndustryRadius"] = "Maximaldistanz um Industrien zu finden",
 		["findIndustryRadiusTT"] = "Empfohlen: 300 oder 450",
 		["findStationRadius"] = "Maximaldistanz um Stationen zu finden",
