@@ -47,7 +47,7 @@ end
 
 local function isStation(entity)
 	if entity.type == 'CONSTRUCTION' then
-		return entity.fileName:match('^station/') and entity.stations ~= nil
+		return entity.fileName:match('^station/') and entity.stations ~= nil and #entity.stations > 0
 	end
 	return entity.type == 'STATION'
 end
@@ -105,15 +105,17 @@ end
 local function handleEvent(src, id, name, param)
 	if id == "station_placed" then
 		local station = game.interface.getEntity(param.entityId)
-		local stationGroup = findStationGroup(station.id)
-		if stationGroup ~= nil then
-			local reference = findClosestConstructionStationGroup(station)
-			if reference == nil then
-				reference = findClosestIndustry(station)
-			end
-			if reference ~= nil then
-				local isStreetStop = station.type == 'STATION'
-				renameStationAndGroup(station, stationGroup, reference.name, isStreetStop and settings.stripCityNamesOnStreetStations)
+		if station ~= nil then
+			local stationGroup = findStationGroup(station.id)
+			if stationGroup ~= nil then
+				local reference = findClosestConstructionStationGroup(station)
+				if reference == nil then
+					reference = findClosestIndustry(station)
+				end
+				if reference ~= nil then
+					local isStreetStop = station.type == 'STATION'
+					renameStationAndGroup(station, stationGroup, reference.name, isStreetStop and settings.stripCityNamesOnStreetStations)
+				end
 			end
 		end
 	end
@@ -130,7 +132,7 @@ local function guiHandleEvent(builder, event, param)
 			end
 		end
 		if stationId ~= nil and isStation(game.interface.getEntity(stationId)) then
-			game.interface.sendScriptEvent("station_placed", "", {entityId=stationId})
+			game.interface.sendScriptEvent("station_placed", "smartStationNaming", {entityId=stationId})
 		end
 	end
 end

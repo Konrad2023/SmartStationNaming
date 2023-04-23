@@ -1,10 +1,10 @@
-local sizes =    {_('---'), 'S', 'M', 'L', 'XL', 'XXL'}
-local radiuses = {0, 200, 400, 600, 800, 1000}
+local sizes =    {_('---'), '75', '150', '300', '450', '600' }
+local radiuses = {0, 75, 150, 300, 450, 600}
 
 function data()
 	return {
 		info = {
-			minorVersion = 0,
+			minorVersion = 1,
 			severityAdd = "NONE",
 			severityRemove = "NONE",
 			name = _("modName"),
@@ -31,7 +31,7 @@ function data()
 					tooltip = _("findIndustryRadiusTT"),
 					uiType = "SLIDER",
 					values = sizes,
-					defaultIndex = 2,
+					defaultIndex = 3,
 				},
                 {
                     key = "stripCityNamesOnStreetStations",
