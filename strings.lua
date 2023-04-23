@@ -48,5 +48,21 @@ return {
 		["stripCityNamesOnStreetStationsTT"] = "Applicable uniquement aux arrêts de bus/tram/déchargement.",
 		["---"] = "désact.",
 	},
+	zh_TW = {
+		["modName"] = "智能車站命名",
+		["modDescription"] = "此模組主要目的是為了最佳化新建車站時自動產生的車站名稱\n\n" ..
+			"1. 如果在已建車站附近放置新車站/停靠點，站名會與已建車站名稱相同。\n"..
+			"2. 除此之外，將新車站放置在產業旁邊，站名亦會與產業名稱相同。\n"..
+			"3. 對於在城市中的停靠點，可啟用自動移除城市名稱前綴功能。\n\n"..
+			"命名功能可透過設定調整。例如產業與車站的搜尋半徑、只啟用產業自動命名等…\n\n"..
+			"附近產業的預設搜尋範圍約為 400 單位；在尋找附近的車站時只會搜尋帶建築物的車站，而忽略已建停靠點。",
+		["findIndustryRadius"] = "最大附近產業搜尋半徑",
+		["findIndustryRadiusTT"] = "建議: 300 or 450",
+		["findStationRadius"] = "最大附近車站搜尋半徑",
+		["findStationRadiusTT"] = "建議: 75 or 150",
+		["stripCityNamesOnStreetStations"] = "移除停靠點的城市名稱前綴",
+		["stripCityNamesOnStreetStationsTT"] = "只會套用於公車/電車/卸貨點。",
+		["---"] = "停用",
+	}
 }
 end
